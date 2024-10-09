@@ -123,6 +123,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &120845456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 120845458}
+  - component: {fileID: 120845457}
+  m_Layer: 0
+  m_Name: Study_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &120845457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120845456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c53e72a5e3d5b40b41c3b477064d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info1: {fileID: 1090020941}
+--- !u!4 &120845458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120845456}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.5517635, y: 4.5760303, z: -6.660242}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &310827202
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +449,7 @@ GameObject:
   - component: {fileID: 572480677}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -509,7 +554,7 @@ GameObject:
   - component: {fileID: 680240638}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -612,7 +657,7 @@ GameObject:
   - component: {fileID: 686974187}
   - component: {fileID: 686974186}
   m_Layer: 5
-  m_Name: Text (Legacy) (3)
+  m_Name: txt_info4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -889,7 +934,7 @@ GameObject:
   - component: {fileID: 1090020942}
   - component: {fileID: 1090020941}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: txt_info1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -968,7 +1013,7 @@ GameObject:
   - component: {fileID: 1475003819}
   - component: {fileID: 1475003818}
   m_Layer: 5
-  m_Name: Text (Legacy) (2)
+  m_Name: txt_info3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1047,7 +1092,7 @@ GameObject:
   - component: {fileID: 1938704226}
   - component: {fileID: 1938704225}
   m_Layer: 5
-  m_Name: Text (Legacy) (1)
+  m_Name: txt_info2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1125,3 +1170,4 @@ SceneRoots:
   - {fileID: 768739004}
   - {fileID: 680240641}
   - {fileID: 572480680}
+  - {fileID: 120845458}
