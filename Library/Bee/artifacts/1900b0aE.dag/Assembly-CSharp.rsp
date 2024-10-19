@@ -357,6 +357,7 @@
 "Assets/Script/MarketManager.cs"
 "Assets/Script/OverManager.cs"
 "Assets/Script/TitleManager.cs"
+"Assets/Script/ZombieCotroll.cs"
 "Assets/Study/Char_recog.cs"
 -langversion:9.0
 

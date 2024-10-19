@@ -9,6 +9,7 @@ public class CamScroll : MonoBehaviour
     public Camera mycam;
     public float speed=15f;
     public int dir_x;
+    public float dir_acc;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,10 @@ public class CamScroll : MonoBehaviour
 
     void Scroll_Cam()
     {
-        mycam.transform.Translate(Vector3.right * speed * Time.deltaTime*dir_x);
+        //mycam.transform.Translate(Vector3.right * speed * Time.deltaTime*dir_x);
+
+        mycam.transform.position+= Vector3.right * speed * Time.deltaTime * dir_x;
+
         //if (mycam.transform.position.x <= -30)
         //{
         //    mycam.transform.position = new Vector3(-30, 3, 1 - 15);
@@ -32,10 +36,26 @@ public class CamScroll : MonoBehaviour
         temppos.x=Mathf.Clamp(mycam.transform.position.x, -30, 30); // 두값 내에서만 위치하도록 변수값을 제한을 두는 함수
         mycam.transform.position = temppos;
     }
+
+    void Scroll_Cam_Phone()
+    {
+        dir_acc = Input.acceleration.x;
+        mycam.transform.position += Vector3.right * speed * Time.deltaTime * dir_x;
+        Vector3 temppos = mycam.transform.position;
+        temppos.x = Mathf.Clamp(mycam.transform.position.x, -30, 30); // 두값 내에서만 위치하도록 변수값을 제한을 두는 함수
+        mycam.transform.position = temppos;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        Scroll_Cam();
+        // 유니티에서 정의된 키워드나 상황에 따른 선택적 로직수행
+#if UNITY_ANDROID
+        Scroll_Cam_Phone(); // 안드로이드용
+#else
+        Scroll_Cam(); // PC 용 
+
+#endif
     }
     public void Btn_Scroll_L()
     {
